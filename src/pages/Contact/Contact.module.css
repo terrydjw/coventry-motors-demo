@@ -1,0 +1,116 @@
+.contactPage {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.hero {
+    text-align: center;
+    padding: 4rem 1rem;
+    background-color: var(--medium-grey);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--accent-blue);
+}
+
+.contactLayout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.details,
+.formContainer {
+    background-color: var(--medium-grey);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.details h2,
+.formContainer h2 {
+    margin-top: 0;
+    font-size: 2rem;
+    border-bottom: 2px solid var(--accent-blue);
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+.details p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.details a {
+    color: var(--accent-blue);
+}
+
+.map {
+    margin-top: 2rem;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.formGroup {
+    margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.formGroup input,
+.formGroup textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: var(--dark-grey);
+    color: var(--light-grey);
+    font-size: 1rem;
+    box-sizing: border-box;
+    /* Important for padding */
+}
+
+.submitButton {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--accent-blue);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-family: var(--heading-font);
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submitButton:hover {
+    background-color: #00c2cb;
+}
+
+@media (max-width: 900px) {
+    .contactLayout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

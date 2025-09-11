@@ -1,0 +1,15 @@
+{
+    "business_name": "Coventry Motors",
+    "knowledge_base_path": "knowledge_base.md",
+    "google_credentials_path": "credentials.json",
+    "google_token_path": "token.json",
+    "google_calendar_id": "primary",
+    "price_list": {
+        "MOT Test": 54.85,
+        "Standard Service": 125.00,
+        "Major Service": 210.00,
+        "Brake Fluid Change": 45.00,
+        "Air Con Recharge": 60.00,
+        "Diagnostic Check": 49.99
+    }
+}

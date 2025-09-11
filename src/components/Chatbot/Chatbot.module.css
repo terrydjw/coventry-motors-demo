@@ -1,0 +1,170 @@
+/* Using the same styles from the previous step, but scoped to this component */
+.chatToggleButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--accent-blue);
+    color: white;
+    border: none;
+    font-family: var(--heading-font);
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
+    transition: transform 0.2s ease;
+}
+
+.chatToggleButton:hover {
+    transform: scale(1.1);
+}
+
+.chatWidget {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    width: 370px;
+    max-width: 90%;
+    background-color: var(--dark-grey);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid var(--medium-grey);
+    z-index: 1000;
+}
+
+.chatHeader {
+    background-color: var(--accent-blue);
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-family: var(--heading-font);
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.chatWindow {
+    padding: 20px;
+    height: 400px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.message {
+    padding: 12px 18px;
+    border-radius: 20px;
+    max-width: 85%;
+    line-height: 1.5;
+    font-size: 0.95rem;
+    color: var(--light-grey);
+}
+
+.botMessage {
+    background-color: var(--medium-grey);
+    align-self: flex-start;
+    border-bottom-left-radius: 5px;
+}
+
+.userMessage {
+    background-color: var(--accent-blue);
+    color: white;
+    align-self: flex-end;
+    border-bottom-right-radius: 5px;
+}
+
+.chatInputArea {
+    display: flex;
+    padding: 15px;
+    border-top: 1px solid var(--medium-grey);
+    background-color: var(--dark-grey);
+}
+
+.chatInputArea input {
+    flex-grow: 1;
+    border: 1px solid var(--medium-grey);
+    background-color: #2a313a;
+    color: var(--light-grey);
+    border-radius: 20px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    margin-right: 10px;
+}
+
+.chatInputArea input:focus {
+    outline: none;
+    border-color: var(--accent-blue);
+}
+
+.chatInputArea button {
+    background-color: var(--accent-blue);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 0 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.typingDot {
+    width: 8px;
+    height: 8px;
+    background-color: #888;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 2px;
+    animation: typing-pulse 1.5s infinite;
+}
+
+.typingDot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typingDot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes typing-pulse {
+
+    0%,
+    60%,
+    100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+
+    30% {
+        transform: scale(0.7);
+        opacity: 1;
+    }
+}
+
+/* --- Quick Reply Styles --- */
+.quickReplies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+    padding: 0 10px;
+}
+
+.quickReplyButton {
+    background-color: transparent;
+    border: 1px solid var(--accent-blue);
+    color: var(--accent-blue);
+    border-radius: 20px;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.quickReplyButton:hover {
+    background-color: var(--accent-blue);
+    color: white;
+}
