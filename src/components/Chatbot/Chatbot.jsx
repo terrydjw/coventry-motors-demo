@@ -24,7 +24,7 @@ const Chatbot = () => {
     useEffect(() => {
         if (isOpen && messages.length === 0) {
             setIsTyping(true);
-            fetch('http://127.0.0.1:5000/chat', {
+            fetch('https://api.verndigital.com/chat', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ message: '' }),
@@ -53,7 +53,7 @@ const Chatbot = () => {
         setShowQuickReplies(false);
 
         try {
-            const response = await fetch('http://127.0.0.1:5000/chat', {
+            const response = await fetch('https://api.verndigital.com/chat', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ message: messageText }),
